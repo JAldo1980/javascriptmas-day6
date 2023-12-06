@@ -73,3 +73,19 @@ select {
   }
 }
 /* end of css reset */
+
+.left {
+  display: flex;
+  flex-direction: row;
+  gap: 2em;
+}
+
+.right-el {
+  margin-top: 1em;
+}
+
+.right {
+  display: flex;
+  flex-direction: row;
+  gap: 2em;
+}
