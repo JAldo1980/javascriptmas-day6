@@ -74,6 +74,19 @@ select {
 }
 /* end of css reset */
 
+html,
+body {
+  min-height: 100%;
+  margin: 0;
+}
+
+body {
+  background-image: url(/secret-santa-bkg.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
 .container {
   margin: 0 auto;
   width: 500px;
@@ -86,12 +99,26 @@ header {
   text-align: center;
 }
 
+header h1 {
+  font-size: 6rem;
+  font-family: "Mountains of Christmas", serif;
+  color: white;
+}
+
+header h4 {
+  font-size: 1.5rem;
+  font-family: "Mountains of Christmas", serif;
+  color: white;
+}
+
 .dashboard {
+  margin-top: 2em;
   display: flex;
   justify-content: space-around;
 }
 
 .input-box-el {
+  margin-top: 0.5em;
   display: flex;
   flex-direction: column;
 }
@@ -106,20 +133,48 @@ header {
 }
 
 input[type="number"] {
-  width: 40%;
+  width: 50%;
 }
 
 button {
   cursor: pointer;
 }
 
-.clear-btn {
-  width: 100%;
+.add-btn {
+  background-color: #3d5ba4;
+  padding: 0.5em 1em;
+  border-radius: 10px;
+  border: none;
+  color: white;
+  font-family: "Mountains of Christmas", serif;
+  border: white thin solid;
+  font-size: 1.2rem;
 }
 
-.add-btn,
-.btn-create-secret-santa {
+.add-budget {
+  width: 100%;
+  background-color: #3d5ba4;
+  padding: 0.5em 1em;
+  border-radius: 10px;
+  border: none;
+  color: white;
+  font-family: "Mountains of Christmas", serif;
+  border: white thin solid;
+  font-size: 1.2rem;
+}
+
+.add-btn {
   margin-top: 1em;
+}
+
+.btn-create-secret-santa {
+  margin-top: 2em;
+  background-color: #da2611;
+  padding: 1em;
+  border-radius: 10px;
+  font-size: 1.4rem;
+  font-family: "Mountains of Christmas", serif;
+  color: white;
 }
 
 .output-box-el {
@@ -131,29 +186,37 @@ button {
 .output-headlines {
   display: flex;
   justify-content: space-around;
+  color: white;
+  font-size: 1.4rem;
+  font-family: "Mountains of Christmas", serif;
 }
 
 .left {
+  font-size: 1.3rem;
+  margin-top: 0.5em;
   display: flex;
   flex-direction: row;
   justify-content: space-around;
   gap: 2em;
-}
-
-.left p {
-  padding-left: 0;
-  text-align: center;
+  background-color: #fbfef7;
+  border-radius: 6px;
+  padding: 0.3em 0em;
 }
 
 .right-el {
-  margin-top: 1em;
+  margin-top: 0.1em;
 }
 
 .right {
+  font-size: 1.3rem;
+  margin-top: 0.5em;
   display: flex;
   flex-direction: row;
   justify-content: space-around;
   gap: 2em;
+  background-color: #fbfef7;
+  border-radius: 6px;
+  padding: 0.3em 0em;
 }
 
 .dynamic-flex {
@@ -165,7 +228,24 @@ button {
 }
 
 .dynamic-element {
+  font-size: 1.2rem;
   border-radius: 6px;
   padding: 0.3em 1em;
-  background-color: lightblue;
+  background-color: #f2c847;
+  font-family: "Mountains of Christmas", serif;
+}
+
+input {
+  padding: 0.5em 1em;
+  border-radius: 10px;
+  border: none;
+}
+
+.budget-counter,
+.participant-counter {
+  background-color: #f2c847;
+  padding: 0.3em 1em;
+  font-size: 1.2rem;
+  border-radius: 6px;
+  font-family: "Mountains of Christmas", serif;
 }

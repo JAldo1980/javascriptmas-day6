@@ -4,6 +4,12 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DotGothic16&family=Mountains+of+Christmas:wght@700&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="index.css" />
     <title>secret santa 🎅</title>
   </head>
@@ -12,21 +18,21 @@
       <div class="container">
         <header>
           <h1>Secret Santa</h1>
-          <h4>Subheader goes here</h4>
+          <h4>Give a gift to a person you don't really know!</h4>
         </header>
         <div class="dashboard">
           <div class="participant-counter">
             <p>Participants:</p>
           </div>
           <div class="budget-counter">
-            <p>£ / $ / €:</p>
+            <p>$:</p>
           </div>
         </div>
 
         <section class="input-box-el">
           <input
             type="text"
-            placeholder="add a participant!"
+            placeholder="Add a participant's name!"
             id="input-participant"
           />
           <div id="dynamic" class="dynamic-flex">
@@ -35,7 +41,12 @@
           <button id="add-btn" class="add-btn">Add</button>
 
           <div class="input-budget-el">
-            <input type="number" id="input-budget" placeholder="add a budget" />
+            <input
+              type="number"
+              id="input-budget"
+              placeholder="Add max budget spend"
+              title="Max budget spend per person"
+            />
             <button id="add-budget" class="add-budget">Add Budget</button>
           </div>
 
@@ -46,8 +57,8 @@
 
         <section class="output-box-el">
           <div class="output-headlines">
-            <h3>Santa</h3>
-            <h3>Recipient</h3>
+            <h3>Santa 🎅</h3>
+            <h3>Recipient 🎁</h3>
           </div>
           <div id="output-left" class="left-el">
             <!-- santa output -->
