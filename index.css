@@ -74,10 +74,75 @@ select {
 }
 /* end of css reset */
 
+.container {
+  margin: 0 auto;
+  width: 500px;
+  max-width: 100%;
+
+  padding: 1em;
+}
+
+header {
+  text-align: center;
+}
+
+.dashboard {
+  display: flex;
+  justify-content: space-around;
+}
+
+.input-box-el {
+  display: flex;
+  flex-direction: column;
+}
+
+.input-budget-el {
+  width: 100%;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  margin-top: 1em;
+  gap: 2em;
+}
+
+input[type="number"] {
+  width: 40%;
+}
+
+button {
+  cursor: pointer;
+}
+
+.clear-btn {
+  width: 100%;
+}
+
+.add-btn,
+.btn-create-secret-santa {
+  margin-top: 1em;
+}
+
+.output-box-el {
+  margin-top: 1em;
+  display: flex;
+  flex-direction: column;
+}
+
+.output-headlines {
+  display: flex;
+  justify-content: space-around;
+}
+
 .left {
   display: flex;
   flex-direction: row;
+  justify-content: space-around;
   gap: 2em;
+}
+
+.left p {
+  padding-left: 0;
+  text-align: center;
 }
 
 .right-el {
@@ -87,5 +152,20 @@ select {
 .right {
   display: flex;
   flex-direction: row;
+  justify-content: space-around;
   gap: 2em;
+}
+
+.dynamic-flex {
+  margin-top: 0.5em;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 1em;
+}
+
+.dynamic-element {
+  border-radius: 6px;
+  padding: 0.3em 1em;
+  background-color: lightblue;
 }

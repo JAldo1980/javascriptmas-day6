@@ -1,16 +1,10 @@
 // initial array (namesOne) will store names entered by user
-let namesOne = [
-  "rick",
-  "petra",
-  "martha",
-  "david",
-  "sarah",
-  "milan",
-  "beata",
-  "jimmy",
-];
+let namesOne = [];
 
 let namesTwo = [];
+
+// render santa list button
+const renderSantaListBtn = document.getElementById("btn-create-secret-santa");
 
 // randomise namesOne Array Index (fisher-yates method used here)
 // This will stop assignments matching with user input order
@@ -42,9 +36,6 @@ for (let i = 0; i < namesOne.length; i += 2) {
   }
 }
 
-console.log("Santa 1 Assign", nameObjectOne);
-console.log("Santa 2 Assign", nameObjectTwo);
-
 // OUTPUTS - SANTA 1
 const left = document.getElementById("output-left");
 const right = document.getElementById("output-right");
@@ -56,7 +47,7 @@ for (const [key, value] of Object.entries(nameObjectOne)) {
   <div class="left">
     <p>${key}</p> 
     <p>${value}</p>
-</div>
+    </div>
   `;
 }
 
@@ -73,4 +64,62 @@ for (const [key, value] of Object.entries(nameObjectTwo)) {
   `;
 }
 
-console.log(namesTwo);
+// Add btn event listener
+const addBtn = document.getElementById("add-btn");
+addBtn.addEventListener("click", addParticipant);
+
+// Participant INPUT function
+const inputParticipant = document.getElementById("input-participant");
+
+function addParticipant() {
+  let participantName = document.getElementById("input-participant").value;
+
+  namesOne.push(participantName);
+
+  // PARTICIPANT COUNTER
+  let participantNumber = namesOne.length;
+  const counter = document.querySelector(".participant-counter");
+  counter.textContent = `Participants: ${participantNumber}`;
+
+  dynamicRender();
+  clearInput();
+}
+
+// Add dynamic participant list below the participant input field.
+const dynamic = document.getElementById("dynamic");
+function dynamicRender() {
+  dynamic.innerHTML = "";
+  namesOne.forEach((name) => {
+    dynamic.innerHTML += `
+        <div class="dynamic-element">
+        ${name}
+        </div>
+        
+        `;
+  });
+}
+
+// input BUDGET function
+
+const addBudget = document.getElementById("add-budget");
+
+addBudget.addEventListener("click", renderBudget);
+
+function renderBudget() {
+  let budgetValue = document.getElementById("input-budget").value;
+
+  document.querySelector(".budget-counter").textContent = `£ / $ / €: 
+    ${budgetValue}`;
+
+  // Disable the button
+  addBudget.disabled = true;
+}
+
+// clear input function
+function clearInput() {
+  let participantClear = document.getElementById("input-participant");
+  participantClear.value = "";
+  console.log(namesOne);
+}
+
+// Render Santa list function

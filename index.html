@@ -9,14 +9,56 @@
   </head>
   <body>
     <div class="wrapper">
-      <div class="container"></div>
+      <div class="container">
+        <header>
+          <h1>Secret Santa</h1>
+          <h4>Subheader goes here</h4>
+        </header>
+        <div class="dashboard">
+          <div class="participant-counter">
+            <p>Participants:</p>
+          </div>
+          <div class="budget-counter">
+            <p>£ / $ / €:</p>
+          </div>
+        </div>
+
+        <section class="input-box-el">
+          <input
+            type="text"
+            placeholder="add a participant!"
+            id="input-participant"
+          />
+          <div id="dynamic" class="dynamic-flex">
+            <!-- participant list dynaimcally rendered -->
+          </div>
+          <button id="add-btn" class="add-btn">Add</button>
+
+          <div class="input-budget-el">
+            <input type="number" id="input-budget" placeholder="add a budget" />
+            <button id="add-budget" class="add-budget">Add Budget</button>
+          </div>
+
+          <button id="btn-create-secret-santa" class="btn-create-secret-santa">
+            Create Secret Santa List!
+          </button>
+        </section>
+
+        <section class="output-box-el">
+          <div class="output-headlines">
+            <h3>Santa</h3>
+            <h3>Recipient</h3>
+          </div>
+          <div id="output-left" class="left-el">
+            <!-- santa output -->
+          </div>
+          <div id="output-right" class="right-el">
+            <!-- recipent output -->
+          </div>
+        </section>
+      </div>
     </div>
-    <div id="output-left" class="left-el">
-      <!-- santa output -->
-    </div>
-    <div id="output-right" class="right-el">
-      <!-- recipent output -->
-    </div>
+
     <script src="index.js"></script>
   </body>
 </html>
